@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
         <!-- Bootstrap core CSS -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
         <style>
             .bd-placeholder-img {
@@ -30,8 +30,8 @@
         </style>
 
         <!-- Custom styles for this template -->
-        <link href="{{ asset('assets/css/signin.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/assets/css/signin.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/assets/css/dashboard.css') }}" rel="stylesheet">
     </head>
     <body>
         @yield('content')
