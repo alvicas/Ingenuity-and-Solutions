@@ -21,7 +21,9 @@ Route::middleware('auth')->group(function () {
         $authUser = Auth::user();
         return view('components\dashboard', ['authUserName' => $authUser->name]);
     });
- 
+    Route::get('/', function () {
+        return redirect('/library');
+    });
 });
 
 
@@ -33,6 +35,7 @@ Route::get('/register', function () {
     return view('components/auth/signUp');
 })->name('register');
 
+
 Route::prefix('auth')->group(function () {
     Route::post('/login', [LoginController::class, '__invoke'])->name('auth.login');
     Route::post('/register', [RegisterController::class, '__invoke'])->name('auth.register');
@@ -41,3 +44,4 @@ Route::prefix('auth')->group(function () {
         return redirect('login');
     })->name('auth.logout');
 });
+
